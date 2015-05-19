@@ -1,0 +1,165 @@
+@import "normalize";
+@import "mixins";
+
+body {
+	background: #000;
+}
+
+//WRAPPER & CONTAINER STYLES***********************************************************************
+
+.wrapper {
+	background-image: url("../images/bg3.JPG");
+	width: 80%;
+	margin: auto;
+	height: 94vh;
+	overflow:hidden;
+	@media (max-width: 480px) { 
+		width: 100%;
+	}
+}
+.container {
+	width: 100%;
+	height: 100%;
+
+}
+
+//HEADER STYLES***********************************************************************
+
+header.instructions {
+	padding: 10px;
+	h1 {
+		@include primary-styles (40px, #fff, 7px);
+		text-shadow: 1px 1px 10px #000;
+		margin: 0;
+		@media (max-width: 480px) {
+			@include primary-styles (20px, #fff, 3px);
+		}
+	}
+	h2 {
+	 	@include primary-styles (30px, #fff, 1px);
+	 	text-shadow: 1px 1px 10px #000;
+	 	padding: 0 80px;
+	 	margin: 0;
+	 	@media (max-width: 480px) {
+			@include primary-styles (14px, #fff, 1px);
+			padding: 0 30px;
+		}
+	}
+}
+
+//NAVIGATION STYLES***********************************************************************
+
+nav.previews {
+	// background: tomato;
+	margin-bottom: 1.5%;
+	.previews-container {
+		display: flex;
+		justify-content: space-between;
+		width: 40%;
+		margin: auto;
+		// background: yellow;
+		@media (max-width: 480px) {
+			width: 60%;
+		}
+		img {
+			padding: 0 10px;
+			max-width: 100%;
+			display: block;
+			@media (max-width: 480px) {
+				max-width: 120%;
+			}
+		}
+	}
+}
+
+
+
+//MAIN GALLERY*****************************************************************************
+.gallery {
+	display: flex;
+	justify-content: space-between;
+	// background: lightblue;
+	height: 62%;
+}
+
+main.full {
+	width: 40%;
+	height: 100%;
+	margin-top: 10px;
+	margin: auto;
+	overflow: hidden;
+	img {
+		max-width: 100%;
+		@media (max-width: 480px) {
+			padding: 30px 0;
+		}
+	}
+}
+.flexbox {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+
+//ACCESSORIES STYLES***********************************************************************
+figure.accessories {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 25%;
+	// background: lightgreen;
+	position: relative;
+	.acc-size {
+		width: 50px;
+		height: 50px;
+	}
+	.acc-posa {
+		position: absolute;
+		left: 50%;
+		margin-left: -25px;
+	}
+	.accessOne {
+		top: 0;
+	}
+	.accessTwo {
+		top: 70px;
+	}
+	.accessThree {
+		top: 140px;
+	}	
+	.accessFour {
+		top: 210px;
+	}	
+	.accessFive {
+		top: 280px;
+	}
+	
+}
+
+
+//FOOTER STYLES****************************************************************************
+
+footer {
+	background: #000;
+	// border-top: 1px solid #fff;
+	width: 80%;
+	height: 6vh;
+	text-align: center;
+	display: flex;
+	margin: auto;
+	.footer-container {
+		// background: tomato;
+		// border-top: 1px solid #fff;
+		margin: auto;
+		padding: 0.5% 1%;
+		p {
+			@include secondary-styles (20px, #fff);
+			margin: 0;
+			text-transform: uppercase;
+			@media (max-width: 480px) {
+				@include secondary-styles (16px, #fff);
+			}
+		}
+	}
+}
